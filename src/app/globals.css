@@ -12,9 +12,16 @@
     --foreground: var(--foreground);
     --color-accent-secondary: var(--secondary);
     --color-accent-primary: var(--primary);
+    --font-raleway: var(--font-raleway);
+    --font-lato: var(--font-lato);
+    --around-lg: 0 0 25px 8px rgb(0 0 0 / 0.1),
 }
 
 body {
     background: var(--background);
     color: var(--foreground);
+}
+
+.hero-section-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.8)), url('https://d3qnldyv492i08.cloudfront.net/ashapurna/images/footer_extra_link/58ea2590-03bf-48b4-9c5e-c901632fe74a-1669895079.jpg');
 }
