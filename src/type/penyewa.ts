@@ -3,7 +3,17 @@ export interface PenyewaData {
     nama: string;
     kamar: string;
     status: TagihanStatusBadgeProps['status'];
-    tagihan: string;
+    sewa: string;
+    jatuhTempo: string;
+}
+
+export interface TagihanData {
+    id: number;
+    invoice: string;
+    nama: string;
+    kamar: string;
+    status: TagihanStatusBadgeProps['status'];
+    sewa: string;
     jatuhTempo: string;
 }
 

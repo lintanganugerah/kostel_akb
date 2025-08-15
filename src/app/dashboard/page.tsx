@@ -12,7 +12,8 @@ function Page() {
                     <h1 className="font-bold text-xl md:text-4xl">Selamat Datang, Pak Budi</h1>
                     <h3 className="text-md md:text-2xl font-light">Ini ringkasan keuangan kost Anda bulan ini.
                         Semua
-                        terlihat baik!</h3>
+                        terlihat baik!
+                    </h3>
                     <div className="flex md:flex-row flex-col gap-2 mt-6">
                         <Button size={'md'} variant={"transparentSecondary"}>
                             <Plus className={'w-5 h-5 mr-2'}/>

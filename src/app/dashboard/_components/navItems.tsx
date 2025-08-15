@@ -8,8 +8,8 @@ import {usePathname} from "next/navigation";
 const navItems = [
     {name: "Dashboard", href: "/dashboard", icon: LayoutDashboard},
     {name: "Penyewa", href: "/dashboard/penyewa", icon: UsersRound},
-    {name: "Tagihan", href: "/tagihan", icon: Receipt},
-    {name: "Keuangan", href: "/laporan", icon: DollarSign},
+    {name: "Tagihan", href: "/dashboard/tagihan", icon: Receipt},
+    {name: "Keuangan", href: "/dashboard/laporan", icon: DollarSign},
 ];
 
 export function NavItems() {

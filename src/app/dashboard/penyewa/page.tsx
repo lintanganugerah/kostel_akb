@@ -15,7 +15,7 @@ function Page() {
             nama: 'Budi Santoso',
             kamar: 'Kamar 101',
             status: 'Lunas',
-            tagihan: 'Rp 850.000',
+            sewa: 'Rp 850.000',
             jatuhTempo: '15 Agu 2025'
         },
         {
@@ -23,7 +23,7 @@ function Page() {
             nama: 'Citra Lestari',
             kamar: 'Kamar 102',
             status: 'Lunas',
-            tagihan: 'Rp 850.000',
+            sewa: 'Rp 850.000',
             jatuhTempo: '15 Agu 2025'
         },
         {
@@ -31,7 +31,7 @@ function Page() {
             nama: 'Doni Firmansyah',
             kamar: 'Kamar 203',
             status: 'Terlambat',
-            tagihan: 'Rp 1.700.000',
+            sewa: 'Rp 1.700.000',
             jatuhTempo: '15 Jul 2025'
         },
         {
@@ -39,7 +39,7 @@ function Page() {
             nama: 'Eka Putri',
             kamar: 'Kamar 301',
             status: 'Lunas',
-            tagihan: 'Rp 900.000',
+            sewa: 'Rp 900.000',
             jatuhTempo: '15 Agu 2025'
         },
     ];
@@ -54,17 +54,12 @@ function Page() {
             accessor: 'kamar',
         },
         {
-            header: 'Tagihan',
-            accessor: 'tagihan', // Diubah dari 'sewa'
+            header: 'Sewa',
+            accessor: 'sewa', // Diubah dari 'sewa'
         },
         {
             header: 'Jatuh Tempo',
             accessor: 'jatuhTempo',
-        },
-        {
-            header: 'Status',
-            accessor: 'status',
-            render: (row: PenyewaData) => <TagihanStatusBadge status={row.status}/>,
         },
     ] as const;
 
@@ -84,8 +79,10 @@ function Page() {
             {/* Table Penyewa */}
             <div
                 className="bg-accent-secondary rounded-2xl row-span-3 border-1 border-gray-300 p-4 flex flex-col gap-8">
-                <div className="flex gap-4">
-                    <Users/>
+                <div className="flex items-center gap-4">
+                    <div className='bg-accent-primary p-2 rounded-lg'>
+                        <Users className={'w-5 h-5 text-accent-secondary'}/>
+                    </div>
                     <p className="font-bold font-raleway text-lg">Daftar Penyewa</p>
                 </div>
                 <ResponsiveTable columns={columns} dataTabel={penyewaData}/>
