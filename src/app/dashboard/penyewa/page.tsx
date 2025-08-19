@@ -5,7 +5,6 @@ import {Button} from "@/components/button";
 import SearchFilter from "@/app/dashboard/penyewa/_components/searchFilter";
 import {Plus, Users} from "lucide-react";
 import {ResponsiveTable} from "@/components/responsiveTable";
-import {TagihanStatusBadge} from "@/components/tagihanStatusBadge";
 import {PenyewaData} from "@/type/penyewa";
 
 function Page() {

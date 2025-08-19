@@ -1,6 +1,6 @@
 "use client";
 
-import {DollarSign, LayoutDashboard, Receipt, UsersRound} from "lucide-react";
+import {Building, DollarSign, LayoutDashboard, Receipt, UsersRound} from "lucide-react";
 import Link from "next/link";
 import React from "react";
 import {usePathname} from "next/navigation";
@@ -9,7 +9,8 @@ const navItems = [
     {name: "Dashboard", href: "/dashboard", icon: LayoutDashboard},
     {name: "Penyewa", href: "/dashboard/penyewa", icon: UsersRound},
     {name: "Tagihan", href: "/dashboard/tagihan", icon: Receipt},
-    {name: "Keuangan", href: "/dashboard/laporan", icon: DollarSign},
+    {name: "Properti", href: "/dashboard/properti", icon: Building},
+    {name: "Keuangan", href: "/dashboard/keuangan", icon: DollarSign},
 ];
 
 export function NavItems() {
@@ -23,11 +24,13 @@ export function NavItems() {
                 const Icon = item.icon;
 
                 return (
-                    <li key={item.name}
-                        className={`flex gap-6 p-2 items-center ${isActive ? 'text-white' : 'hover:bg-gray-100 text-gray-400 hover:text-gray-700 rounded-md'} transition-colors duration-200`}>
-                        <Icon size={16}/>
-                        <Link href={item.href}>{item.name}</Link>
-                    </li>
+                    <Link key={item.name} href={item.href}>
+                        <li
+                            className={`flex gap-6 p-2 items-center ${isActive ? 'text-white' : 'hover:bg-gray-100 text-gray-400 hover:text-gray-700 rounded-md'} transition-colors duration-200`}>
+                            <Icon size={16}/>
+                            {item.name}
+                        </li>
+                    </Link>
                 );
             })}
         </ul>
